@@ -1,5 +1,5 @@
 import "./NewExpense.css";
 const NewExpense = () => {
-  return <div></div>;
+  return <div className='new-expense'></div>;
 };
 export default NewExpense;
