@@ -5,7 +5,7 @@ import Button from "../UI/Button/Button";
 import Card from "../UI/Card/Card";
 import classes from "./Home.module.css";
 
-const Home = (props) => {
+const Home = () => {
   const authCtx = useContext(AuthContext);
 
   return (
