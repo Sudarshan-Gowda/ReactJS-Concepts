@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from "react";
+import Button from "./components/UI/Button/Button";
 
-import './App.css';
+import "./App.css";
 
 function App() {
+  const [showParagraph, setShowParagraph] = useState(false);
+
+  //console.log("Logging here");
+
+  const toggleParagraphHandler = () => {
+    setShowParagraph((prev) => !prev);
+  };
+
   return (
-    <div className="app">
+    <div className='app'>
       <h1>Hi there!</h1>
+      {showParagraph && <p>This is new Paragraph!</p>}
+      <Button onClick={toggleParagraphHandler}>Toggle Paragraph</Button>
     </div>
   );
 }
