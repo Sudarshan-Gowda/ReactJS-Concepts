@@ -13,7 +13,8 @@ const SimpleInput = (props) => {
     event.preventDefault();
     console.log(enteredName);
     // console.log(nameInputRef.current.value);
-    setEnteredName("");
+    //   setEnteredName("");
+    // nameInputRef.current.value = "";
   };
 
   return (
