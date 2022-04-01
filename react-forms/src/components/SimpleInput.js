@@ -15,6 +15,11 @@ const SimpleInput = (props) => {
     // console.log(nameInputRef.current.value);
     //   setEnteredName("");
     // nameInputRef.current.value = "";
+
+    if (enteredName.trim === "") {
+      return;
+    }
+    setEnteredName("");
   };
 
   return (
