@@ -1,14 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const BasicForm = (props) => {
-  // const [isFormvalid, setIsFormValid] = useState(false);
+  const [isFormvalid, setIsFormValid] = useState(false);
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
-
-  // const [enteredFirstNameIsValid, setEnteredFirstNameIsValid] = useState(false);
-  // const [enteredLastNameIsValid, setEnteredLastNameIsValid] = useState(false);
-  // const [enteredEmailIsValid, setEnteredEmailIsValid] = useState(false);
 
   const [enteredFirstNameTouched, setEnteredFirstNameTouched] = useState(false);
   const [enteredLastNameTouched, setEnteredLastNameTouched] = useState(false);
@@ -25,6 +21,16 @@ const BasicForm = (props) => {
     !enteredLastNameIsValid && enteredLastNameTouched;
 
   const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
+
+  useEffect(() => {
+    if (
+      enteredFirstNameIsValid &&
+      enteredLastNameIsValid &&
+      enteredEmailIsValid
+    )
+      setIsFormValid(true);
+    else setIsFormValid(false);
+  }, [enteredFirstNameIsValid, enteredLastNameIsValid, enteredEmailIsValid]);
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
@@ -132,7 +138,7 @@ const BasicForm = (props) => {
         )}
       </div>
       <div className='form-actions'>
-        <button>Submit</button>
+        <button disabled={!isFormvalid}>Submit</button>
       </div>
     </form>
   );
