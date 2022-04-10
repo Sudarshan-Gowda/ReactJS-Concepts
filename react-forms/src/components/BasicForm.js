@@ -34,9 +34,9 @@ const BasicForm = (props) => {
     setEnteredEmailTouched(true);
 
     if (
-      !firstNameInputIsInvalid ||
-      !lastNameInputIsInvalid ||
-      !emailInputIsInvalid
+      firstNameInputIsInvalid ||
+      lastNameInputIsInvalid ||
+      emailInputIsInvalid
     ) {
       return;
     }
