@@ -6,7 +6,6 @@ import Comments from "../components/comments/Comments";
 import useHttp from "../hooks/use-http";
 import { getSingleQuote } from "../lib/api";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
-import NoQuotesFound from "../components/quotes/NoQuotesFound";
 
 const QuoteDetail = () => {
   const params = useParams();
