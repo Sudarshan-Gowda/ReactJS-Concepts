@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import classes from './MainNavigation.module.css';
+import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   return (
